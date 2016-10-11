@@ -1,5 +1,5 @@
 (function(){
   'use strict';
 
-  angular.module('restaurant', []);
+  angular.module('data', []);
 })();
