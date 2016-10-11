@@ -1,5 +1,8 @@
-<a>Categories Template</a>
+<a ui-sref="home">Home</a>
+<h3>Categories Template</h3>
 
 <div ng-repeat="item in categories.items">
-  <span ng-click="categories.categoryClicked($index)"> {{ item.name }} <span>
+  <a ui-sref="items({category: item.short_name})">
+  	{{ item.name }}
+  </a>
 </div>

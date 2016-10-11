@@ -25,7 +25,7 @@
       templateUrl: 'src/menuapp/templates/categories.template.html',
       controller: 'CategoriesController as categories',
       resolve: {
-        items: ['MenuDataService', function (MenuDataService) {
+        catItems: ['MenuDataService', function (MenuDataService) {
           return MenuDataService.getAllCategories();
         }]
       }
@@ -36,7 +36,7 @@
       templateUrl: 'src/menuapp/templates/items.template.html',
       controller: 'ItemsController as items',
       resolve: {
-        items: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
+        menuItems: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
           return MenuDataService.getItemsForCategory($stateParams.category);
         }]
       }
